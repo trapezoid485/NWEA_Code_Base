@@ -1,0 +1,62 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 33% 92%;
+    --foreground: 36 2% 55%;  /* Changed to match #8E8D8A */
+
+    --card: 45 25% 92%;
+    --card-foreground: 36 2% 55%;  /* Changed to match #8E8D8A */
+
+    --popover: 45 33% 92%;
+    --popover-foreground: 36 2% 55%;  /* Changed to match #8E8D8A */
+
+    --primary: 5 76% 60%;
+    --primary-foreground: 45 33% 92%;
+
+    --secondary: 33 35% 74%;
+    --secondary-foreground: 36 2% 55%;  /* Changed to match #8E8D8A */
+
+    --muted: 33 35% 74%;
+    --muted-foreground: 36 2% 55%;  /* Changed to match #8E8D8A */
+
+    --accent: 6 75% 57%;
+    --accent-foreground: 45 33% 92%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 45 33% 92%;
+
+    --border: 33 35% 74%;
+    --input: 33 35% 74%;
+    --ring: 6 75% 57%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-whistleblower-background text-foreground;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .legal-reference {
+    @apply text-whistleblower-accent underline underline-offset-2 cursor-help transition-all hover:text-opacity-80;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg rounded-lg;
+  }
+}
